@@ -22,7 +22,7 @@
             <a :href="'/products/' + product.slug"  class="font-gilroy-400 text-16 capitalize">{{ product.title }}</a>
           </div>
 
-          <div class="mb-0 mobile-m:max-w-[160px] flex flex-wrap sm:flex-nowrap">
+          <div class="mb-0 mobile-m:max-w-[160px] flex flex-wrap md:flex-nowrap">
             <span dusk="product-card-product-price" class="font-gilroy-600 text-16 text-[#333333] mr-[8px]">{{ getCurrency(product.price) }}</span>
             <span v-if="product.old_price"
               class="font-gilroy-400 text-14 text-[#777777] line-through">{{ getCurrency(product.old_price) }}</span>

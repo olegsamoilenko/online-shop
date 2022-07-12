@@ -1,0 +1,250 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import "_table.css";
+
+@import '_fonts.css';
+@import '_pagination.css';
+
+/*#app { height: 100% }*/
+
+body {
+    position: relative;
+    height: 100%;
+    font-family: Gilroy-Regular, 'sans-serif';
+}
+
+:root {
+    --ms-tag-bg: #DBEAFE;
+    --ms-tag-color: #2563EB;
+    --ms-tag-radius: 9999px;
+    --ms-ring-width: 3px;
+    --ms-ring-color: #DBEAFE;
+    --ms-option-bg-selected: #DBEAFE;
+    --ms-option-color-selected: #000000;
+    --ms-option-bg-disabled: #FFFFFF;
+    --ms-option-color-disabled: #D1D5DB;
+    --ms-option-bg-selected-pointed: #ABCFFE;
+    --ms-option-color-selected-pointed: #000000;
+    --ms-option-bg-selected-disabled: #FFFFFF;
+    --ms-option-color-selected-disabled: #D1FAE5;
+    /*--swiper-navigation-size: 23px;*/
+    /*--swiper-theme-color: #0069ff;*/
+}
+
+.multiselect-border-color {
+    --ms-border-color: #EF4444;
+}
+
+.multiselect-clear {
+    display: none !important;
+}
+
+@layer components {
+    .text-page-title {
+        @apply
+        text-20
+
+        md:text-24
+        lg:text-26
+    }
+
+    .form-input {
+        @apply
+            /*h-[54px]*/
+        border
+        border-gray-300
+        rounded-md
+        focus:shadow-form
+        focus:border-indigo-500
+        focus:ring-indigo-200
+        placeholder:text-14
+        placeholder:text-[#8692A6]
+            /*placeholder:font-gilroy-400*/
+        placeholder:focus:text-[#494949]
+        placeholder:pl-[10px]
+    }
+
+    .form-label {
+        @apply
+        mb-2.5
+        text-gray-700
+        /*text-[#696F79]*/
+            /*font-inter*/
+        font-medium
+    }
+
+    .form-select {
+        @apply
+        border
+        border-gray-300
+        rounded-md
+        /*text-14*/
+        /*text-[#8692A6]*/
+        /*font-inter*/
+        py-2.5
+        /*focus:shadow-form*/
+        /*focus:border-indigo-500*/
+        /*focus:ring-indigo-200*/
+        /*placeholder:text-14*/
+        /*placeholder:text-[#8692A6]*/
+        /*placeholder:font-inter*/
+        /*placeholder:focus:text-[#494949]*/
+        /*placeholder:pl-[10px]*/
+    }
+
+    .form-error {
+        @apply
+        text-red-500
+        font-inter
+        font-light
+        text-14
+    }
+
+    .btn-auth {
+        @apply
+        block
+        mt-8
+        w-full
+        h-[54px]
+        bg-[#1565D8]/*border*/
+        text-[#fff]
+    }
+
+    .main-menu {
+        @apply
+        w-full
+        text-center
+            /*hidden*/
+        md:flex
+        md:justify-between
+        md:items-center
+        md:h-[62px]
+    }
+
+    .active {
+        @apply
+        bg-gray-700
+        bg-opacity-25
+        text-gray-100 !important
+    }
+
+    .paginate-base {
+        @apply
+        bg-white
+        border-gray-300
+        text-gray-500
+        hover:bg-gray-50
+    }
+
+    .paginate-active {
+        @apply
+        z-10
+        bg-indigo-50
+        border-indigo-500
+        text-indigo-600
+    }
+
+    .advantage-icon {
+        @apply
+        w-[40px]
+        h-[40px]
+        mb-[8px]
+        sm:w-[60px]
+        sm:h-[60px]
+        sm:mb-0
+    }
+
+    .advantage-title {
+        @apply
+        font-gilroy-600
+        text-16
+        sm:text-18
+        text-[#333333]
+    }
+
+    .advantage-text {
+        @apply
+        font-gilroy-400
+        text-12
+        sm:text-14
+        text-[#777777]
+    }
+
+    .home-image {
+        @apply
+        w-full
+    }
+
+
+
+    /* ... */
+}
+
+@layer utilities {
+    .modal {
+        color: black;
+        position: fixed;
+        top: 60px;
+        padding: 1rem;
+        background: #fff;
+        z-index: 1000;
+        left: 50%;
+        border-radius: 10px;
+        transform: translateX(-50%);
+        box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .modal-backdrop {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 100;
+        background: rgba(0, 0, 0, .35);
+    }
+
+    /*.test {*/
+    /*    overflow: hidden;*/
+    /*    text-overflow: ellipsis;*/
+    /*    display: -moz-box;*/
+    /*    -moz-box-orient: vertical;*/
+    /*    display: -webkit-box;*/
+    /*    -webkit-line-clamp: 3;*/
+    /*    -webkit-box-orient: vertical;*/
+    /*    line-clamp: 3;*/
+    /*    box-orient: vertical;*/
+    /*}*/
+    /*.swiper {*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*}*/
+    /*.swiper-slide {*/
+    /*    text-align: center;*/
+    /*    font-size: 18px;*/
+    /*    background: #fff;*/
+    /*    !* Center slide text vertically *!*/
+    /*    display: -webkit-box;*/
+    /*    display: -ms-flexbox;*/
+    /*    display: -webkit-flex;*/
+    /*    display: flex;*/
+    /*    -webkit-box-pack: center;*/
+    /*    -ms-flex-pack: center;*/
+    /*    -webkit-justify-content: center;*/
+    /*    justify-content: center;*/
+    /*    -webkit-box-align: center;*/
+    /*    -ms-flex-align: center;*/
+    /*    -webkit-align-items: center;*/
+    /*    align-items: center;*/
+    /*    !*height: 120px !important;*!*/
+    /*}*/
+    /*.swiper-slide-img {*/
+    /*    display: block;*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*    object-fit: cover;*/
+    /*}*/
+
+}

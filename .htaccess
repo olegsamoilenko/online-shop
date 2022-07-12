@@ -2,7 +2,7 @@
 
   RewriteEngine On
 
-  RewriteCond %{HTTP_HOST} ^(WWW.)?monitoring.uareg.com$
+  RewriteCond %{HTTP_HOST} ^(WWW.)?online-shop.uareg.com$
 
   RewriteCond %{REQUEST_URI} !^/public/
 

@@ -26,7 +26,7 @@
         "@tinymce/tinymce-vue": "^4.0.7",
         "@vueform/multiselect": "^2.4.2",
         "laravel-vue-pagination": "^3.0.0",
-        "swiper": "^8.2.4",
+        "swiper": "^8.4.7",
         "vee-validate": "^4.5.11",
         "vue": "^3.2.33",
         "vue-agile": "^2.0.0",

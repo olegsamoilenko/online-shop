@@ -23,7 +23,7 @@
     },
     "dependencies": {
         "@heroicons/vue": "^1.0.6",
-        "@tinymce/tinymce-vue": "^4.0.7",
+        "@tinymce/tinymce-vue": "^6.1.0",
         "@vueform/multiselect": "^2.4.2",
         "laravel-vue-pagination": "^3.0.0",
         "swiper": "^8.2.4",
